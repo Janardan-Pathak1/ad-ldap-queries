@@ -127,3 +127,9 @@ ldapsearch (objectClass=groupPolicyContainer) --attributes displayName,gPCFileSy
 ```ldap
 ldapsearch (objectClass=organizationalUnit) --attributes name
 ```
+
+## To Find kerberostable account
+
+```ldap
+ldapsearch (&(objectCategory=person)(objectClass=user)(servicePrincipalName=*)) --attributes sAMAccountName,servicePrincipalName
+```
